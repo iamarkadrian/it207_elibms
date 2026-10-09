@@ -18,7 +18,6 @@ Built with Java 21 · Swing · FlatLaf · JDBC · MySQL **or** Microsoft SQL Ser
 > **For teachers and students.** This repository is a *reference implementation*: every line is written to be read.
 > It shows a layered architecture, object-oriented design (abstract classes, interfaces, polymorphism, encapsulation),
 > parameterised JDBC with transactions, password hashing, and an automated test suite that drives the real GUI against a real database.
-> [`docs/RUBRIC.md`](docs/RUBRIC.md) maps each grading criterion to the exact files that demonstrate it.
 
 ---
 
@@ -270,4 +269,4 @@ Issues and pull requests are welcome; start with [`CONTRIBUTING.md`](CONTRIBUTIN
 
 ## Acknowledgements
 
-Originally created by BSIT 2B-G1 for *IT 207 - Object Oriented Programming 2: Java* at Bulacan State University: Jovy Ann Adriano, Mark Adrian De Jesus, Eimereen Gatchalian, John Paul Hernandez and Kristine Joy Nacional. This version modernises that project; see [`docs/MIGRATION.md`](docs/MIGRATION.md).
+Originally created by BSIT 2B-G1 for *IT 207 - Object Oriented Programming 2: Java* at Bulacan State University: Jovy Ann Adriano, Mark Adrian De Jesus, Eimereen Gatchalian, John Paul Hernandez and Kristine Joy Nacional. This version modernises that project.

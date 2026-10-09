@@ -4,7 +4,7 @@ All notable changes are recorded here. The format follows [Keep a Changelog](htt
 
 ## [1.0.0] - 2026-10-09
 
-First release of the modernised system, rebuilt from the 2021 NetBeans project. See [docs/MIGRATION.md](docs/MIGRATION.md) for the full story.
+First release of the modernised system, rebuilt from the 2021 NetBeans project.
 
 ### Added
 - **MySQL 8 and SQL Server** support from one code base, with `db/mysql` and `db/mssql` scripts (create, schema, seed, reset).
@@ -26,7 +26,7 @@ First release of the modernised system, rebuilt from the 2021 NetBeans project. 
 - Absolute layouts replaced by layout managers; the window is now resizable.
 
 ### Fixed
-- Hard-coded database and administrator credentials; plain-text passwords; SQL injection; unclosed connections; non-atomic lending (see the table in MIGRATION.md).
+- Hard-coded database and administrator credentials; plain-text passwords; SQL injection; unclosed connections; non-atomic lending.
 - "College of Architecture and Fine Arts" being saved with the code of another college.
 - Tables and counters showing stale data after adding or removing records.
 
