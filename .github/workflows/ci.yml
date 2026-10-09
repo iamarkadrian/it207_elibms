@@ -17,7 +17,7 @@ jobs:
     name: Unit tests (no database)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -48,7 +48,7 @@ jobs:
       LMS_TEST_DB_USER: lms
       LMS_TEST_DB_PASSWORD: lmspw
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -89,7 +89,7 @@ jobs:
       LMS_TEST_ADMIN_USER: sa
       LMS_TEST_ADMIN_PASSWORD: LmsTest!2026x
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
