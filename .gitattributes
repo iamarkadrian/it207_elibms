@@ -1,0 +1,12 @@
+# Normalise line endings so diffs stay clean on Windows, macOS and Linux.
+* text=auto eol=lf
+
+# Windows batch files must keep CRLF; the Maven wrapper script must keep LF.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+mvnw text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jar binary

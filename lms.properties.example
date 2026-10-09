@@ -1,0 +1,21 @@
+# Copy this file to "lms.properties" (same folder as the jar, or ~/.bulsu-lms/lms.properties) and edit it.
+# lms.properties is git-ignored. NEVER commit a real password.
+#
+# Every value can instead be given as an environment variable, which takes priority:
+#   LMS_DB_URL, LMS_DB_USER, LMS_DB_PASSWORD
+
+# ---- MySQL 8 (default) ----
+lms.db.url=jdbc:mysql://localhost:3306/bulsu_lms
+
+# ---- Microsoft SQL Server (uncomment this and comment out the MySQL line above) ----
+# LOCAL DEVELOPMENT ONLY: "trustServerCertificate=true" accepts any certificate, which is fine for a
+# SQL Server on your own PC with a self-signed certificate. For a server on another machine, install a real
+# certificate and remove it:  jdbc:sqlserver://dbhost:1433;databaseName=bulsu_lms;encrypt=true
+# lms.db.url=jdbc:sqlserver://localhost:1433;databaseName=bulsu_lms;encrypt=true;trustServerCertificate=true
+
+# For MySQL on another machine, require verified TLS:
+#   jdbc:mysql://dbhost:3306/bulsu_lms?sslMode=VERIFY_IDENTITY
+
+# The least-privilege account created by db/<vendor>/00_create_database.sql
+lms.db.user=bulsu_lms
+lms.db.password=CHANGE_ME

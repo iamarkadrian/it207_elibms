@@ -1,0 +1,101 @@
+code,name,department_code
+BSAR,Bachelor of Science in Architecture,CAFA
+BFA,Bachelor of Fine Arts,CAFA
+BLA,Bachelor of Landscape Architecture,CAFA
+BAB,Bachelor of Arts in Broadcasting,CAL
+BAJ,Bachelor of Arts in Journalism,CAL
+BAMP,Batsilyer ng Sining Sa Malikhaing Pagsulat,CAL
+BPEA,Bachelor of Arts in Theater Arts,CAL
+BSA,Bachelor of Science in Accountancy,CBA
+BSBA,Bachelor of Science in Business Administration,CBA
+BSE,Bachelor of Science in Entrepreneurship,CBA
+BSC,Bachelor of Science in Criminology,CCJE
+BALM,Bachelor of Arts and Science in Legal Management,CCJE
+BSHM,Bachelor of Science in Hospitality Management,CHTM
+BSTM,Bachelor of Science in Tourism Management,CHTM
+BSIT,Bachelor of Science in Information Technology,CICT
+BLIS,Bachelor of Library and Information Science,CICT
+BIT,Bachelor of Industrial Technology,CIT
+BSCE,Bachelor of Science in Civil Engineering,COE
+BSCPE,Bachelor of Science in Computer Engineering,COE
+BSEE,Bachelor of Science in Electrical Engineering,COE
+BSECE,Bachelor of Science in Electronics and Communications Engineering,COE
+BSIE,Bachelor of Science in Industrial Engineering,COE
+BSMFE,Bachelor of Science in Manufacturing Engineering,COE
+BSME,Bachelor of Science in Mechanical Engineering,COE
+BSMEE,Bachelor of Science in Mechatronics Engineering,COE
+BEED,Bachelor of Elementary Education,COED
+BECED,Bachelor of Early Childhood Education,COED
+BPED,Bachelor of Physical Education,COED
+BSED,Bachelor of Secondary Education,COED
+BTVTED,Bachelor of Technical Vocational Teacher Education,COED
+BTLED,Bachelor of Technology and Livelihood Education,COED
+BSN,Bachelor of Science in Nursing,CON
+BSFT,Bachelor of Science in Food Technology,CS
+BSM-CS,Bachelor of Science in Mathematics - Computer Science,CS
+BSM-AS,Bachelor of Science in Mathematics - Applied Statistics,CS
+BSB,Bachelor of Science in Biology,CS
+BSES,Bachelor of Science in Environmental Science,CS
+BPE,Bachelor of Physical Education,CSER
+BSESS,Bachelor of Science in Exercise and Sports Science,CSER
+BSP,Bachelor of Science in Psychology,CSSP
+BPA,Bachelor of Public Administration,CSSP
+BSSW,Bachelor of Science in Social Work,CSSP
+G7,K-12 Curriculum - Grade 7,LHS
+G8,K-12 Curriculum - Grade 8,LHS
+G9,K-12 Curriculum - Grade 9,LHS
+G10,K-12 Curriculum - Grade 10,LHS
+G11,K-12 Curriculum - Grade 11,LHS
+G12,K-12 Curriculum - Grade 12,LHS
+BEED-BUS,Bachelor in Elementary Education,BUS
+BSED-BUS,Bachelor in Secondary Education,BUS
+BPE-BUS,Bachelor in Physical Education,BUS
+BTVTED-BUS,Bachelor of Technical Vocational Teacher Education,BUS
+BTLED-BUS,Bachelor in Technology and Livelihood Education,BUS
+BSIE-BUS,Bachelor of Science in Industrial Engineering,BUS
+BSIT-BUS,Bachelor of Science in Information Technology,BUS
+BSBA-BUS,Bachelor of Science in Business Administration,BUS
+BIT-BUS,Bachelor in Industrial Technology,BUS
+BEED-HAG,Bachelor in Elementary Education,HAG
+BSED-HAG,Bachelor in Secondary Education,HAG
+BTLED-HAG,Bachelor in Technology and Livelihood Education,HAG
+BSIT-HAG,Bachelor of Science in Information Technology,HAG
+BSTM-HAG,Bachelor of Science in Tourism Management,HAG
+BSHM-HAG,Bachelor of Science in Hospitality Management,HAG
+BIT-HAG,Bachelor in Industrial Technology,HAG
+BEED-MEN,Bachelor in Elementary Education,MEN
+BSED-MEN,Bachelor in Secondary Education,MEN
+BPE-MEN,Bachelor in Physical Education,MEN
+BTVTED-MEN,Bachelor of Technical Vocational Teacher Education,MEN
+BTLED-MEN,Bachelor in Technology and Livelihood Education,MEN
+BSCPE-MEN,Bachelor of Science in Computer Engineering,MEN
+BSHM-MEN,Bachelor of Science in Hospitality Management,MEN
+BIT-MEN,Bachelor of Industrial Technology,MEN
+BSIT-MEN,Bachelor of Science in Information Technology,MEN
+BSBA-MEN,Bachelor of Science in Business Administration,MEN
+BEED-PUL,Bachelor of Elementary Education,PUL
+BECED-PUL,Bachelor of Early Childhood Education,PUL
+BTLED-PUL,Bachelor of Technology and Livelihood Education,PUL
+BTVTED-PUL,Bachelor of Technical Vocational Teacher Education,PUL
+BEED-SARM,Bachelor in Elementary Education,SARM
+BSED-SARM,Bachelor in Secondary Education,SARM
+BSTM-SARM,Bachelor of Science in Tourism Management,SARM
+BIT-SARM,Bachelor of Industrial Technology,SARM
+BSIT-SARM,Bachelor of Science in Information Technology,SARM
+BSBA-SARM,Bachelor of Science in Business Administration,SARM
+BL,Bachelor of Laws,COL
+JD,Juris Doctor,COL
+DED,Doctor of Education,GS
+PHD,Doctor of Philosophy,GS
+DPUBAD,Doctor of Public Administration,GS
+MAPED,Master in Physical Education,GS
+MBA,Master in Business Administration,GS
+MPA,Master in Public Administration,GS
+MAED,Master of Arts in Education,GS
+MEP,Master of Engineering Program,GS
+MITM,Master of Industrial Technology Management,GS
+MSCE,Master of Science in Civil Engineering,GS
+MSCPE,Master of Science in Computer Engineering,GS
+MSECE,Master of Science in Electronics and Communications Engineering,GS
+MIT,Master of Information Technology,GS
+MFE,Master of Manufacturing Engineering,GS

@@ -1,0 +1,107 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  unit:
+    name: Unit tests (no database)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+      - name: Unit tests
+        run: ./mvnw -B test
+
+  mysql:
+    name: Full suite on MySQL 8
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: rootpw
+          MYSQL_DATABASE: bulsu_lms_test
+          MYSQL_USER: lms
+          MYSQL_PASSWORD: lmspw
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -ulms -plmspw"
+          --health-interval=5s --health-timeout=5s --health-retries=20
+    env:
+      LMS_REQUIRE_DB: "true"
+      LMS_TEST_DB_URL: jdbc:mysql://127.0.0.1:3306/bulsu_lms_test
+      LMS_TEST_DB_USER: lms
+      LMS_TEST_DB_PASSWORD: lmspw
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+      - name: Unit, integration and GUI end-to-end tests
+        run: ./mvnw -B verify
+      - name: Upload test reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mysql-test-reports
+          path: |
+            target/surefire-reports
+            target/failsafe-reports
+
+  mssql:
+    name: Full suite on SQL Server 2022
+    runs-on: ubuntu-latest
+    services:
+      mssql:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        env:
+          ACCEPT_EULA: "Y"
+          MSSQL_PID: Developer
+          MSSQL_SA_PASSWORD: LmsTest!2026x
+        ports:
+          - 1433:1433
+        options: >-
+          --health-cmd="/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P 'LmsTest!2026x' -Q 'SELECT 1'"
+          --health-interval=10s --health-timeout=5s --health-retries=30
+    env:
+      LMS_REQUIRE_DB: "true"
+      LMS_TEST_DB_URL: jdbc:sqlserver://localhost:1433;databaseName=bulsu_lms_test;encrypt=true;trustServerCertificate=true
+      LMS_TEST_ADMIN_URL: jdbc:sqlserver://localhost:1433;databaseName=master;encrypt=true;trustServerCertificate=true
+      LMS_TEST_DB_USER: sa
+      LMS_TEST_DB_PASSWORD: LmsTest!2026x
+      LMS_TEST_ADMIN_USER: sa
+      LMS_TEST_ADMIN_PASSWORD: LmsTest!2026x
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+      - name: Unit, integration and GUI end-to-end tests
+        run: ./mvnw -B verify
+      - name: Upload test reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mssql-test-reports
+          path: |
+            target/surefire-reports
+            target/failsafe-reports
